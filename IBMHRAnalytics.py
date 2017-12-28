@@ -117,7 +117,7 @@ decision_reg = DecisionTreeClassifier(criterion='gini',
 decision_reg=decision_reg.fit(x_res, y_res)
 decision_pred=decision_reg.predict(X_CV)
 fpr_dec, tpr_dec, thresholds = roc_curve(Y_CV, decision_pred)
-roc_auc_dec=auc(fpr_log,tpr_log)
+roc_auc_dec=auc(fpr_dec,tpr_dec)
 plt.plot(fpr_dec, tpr_dec, label='Decision Tree: ' + str(roc_auc_dec)[0:7])
 
 
